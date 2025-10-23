@@ -1,0 +1,290 @@
+
+### Active Dwarf Galaxy Database Columns Descriptions ###
+	 # Luminosity values are in erg/s, RA & DEC values are in decimal degrees
+ID (str): Identification taken from NASA-Sloan Atlas (NSA) or source paper.
+RA (double): Right Acensetion [degree].
+DEC (double): Declination [degree].
+Source (str): Source Paper for original AGN selection (See Table 1 in https://doi.org/10.3847/1538-4357/ad5442).
+Literature_Selectino_Method (str): AGN selection method used in Source.
+Mass (double): Host galaxy stellar mass [log M/M_solar].
+Redshift (double): redshift of host galaxy.
+g_band (double): g-band apparent magnitude queried from SimBAD.
+r_band (double): r-band apparent magnitude queried from SimBAD.
+L_Ha_na (double): Luminosity of the narrow Halpha emission line, calculated from PyQSOFit flux and redshift.
+L_Ha_na_err (double): Uncertainty of the luminosity of the narrow Halpha emission line.
+L_Hb_na (double): Luminosity of the narrow Hbeta emission line, calculated from PyQSOFit flux and redshift.
+L_Hb_na_err (double): Uncertainty of the luminosity of the narrow Hbeta emission line.
+L_OIII5007(double): Luminosity of the narrow [O III] emission line at 5007 angstroms, calculated from PyQSOFit flux and redshift.
+L_OIII5007_err (double): Uncertainty of the luminosity of the narrow [O III] emission line at 5007 angstroms.
+L_NII6585(double): Luminosity of the narrow [N II] emission line at 6585 angstroms, calculated from PyQSOFit flux and redshift.
+L_NII6585_err (double): Uncertainty of the luminosity of the narrow [N II] emission line at 6585 angstroms.
+L_SII(double): Luminosity of the narrow [S II] emission line, calculated from PyQSOFit flux and redshift.
+L_SII_err (double): Uncertainty of the luminosity of the narrow [S II] emission line.
+L_OI6300(double): Luminosity of the narrow [O I] emission line at 6300 angstroms, calculated from PyQSOFit flux and redshift.
+L_OIII6300_err (double): Uncertainty of the luminosity of the narrow [O I] emission line at 6300 angstroms.
+L_HeII(double): Luminosity of the narrow [He II] emission line, calculated from PyQSOFit flux and redshift.
+L_HeII_err (double): Uncertainty of the luminosity of the narrow [He II] emission line.
+L_FeX_na(double): Luminosity of the narrow [Fe X] emission line, calculated from PyQSOFit flux and redshift.
+L_FeX_na_err (double): Uncertainty of the luminosity of the narrow [Fe X] emission line.
+BPT_Classification (str): Classification of object on the standard BPT diagram.
+OI_Classification (str):Classification of object on the [O I] diagram.
+SII_Classification (str):Classification of object on the [S II] diagram.
+HeII_Classification (str):Classification of object on the [He II] diagram.
+FWH_Ha_br (double): full-width-half-maximum of the broad Alpha component found with PyQSOFit.
+FWH_Ha_br_err (double): uncertainty of the full-width-half-maximum of the broad Alpha component found with PyQSOFit.
+L_Ha_br (double): Luminosity of the broad Halpha emission line, calculated from PyQSOFit flux and redshift.
+L_Ha_br_err (double): Uncertainty of the luminosity of the broad Halpha emission line.
+L_Hb_br (double): Luminosity of the broad Hbeta emission line, calculated from PyQSOFit flux and redshift.
+L_Hb_br_err (double): Uncertainty of the luminosity of the broad Hbeta emission line.
+M_BH (double): Black hole mass estimation from broad Halpha emission [log M/M_solar].
+M_BH_err (double): uncertainty of black hole mass estimation.
+w1mpro (double): WISE W1 band magnitude taken from the WISE All-Sky Source Catalog.
+w1sigmpro (double): uncertainty in the WISE W1 magnitude from the All-Sky Catalog.
+w2mpro (double): WISE W2 band magnitude taken from the WISE All-Sky Source Catalog.
+w2sigmpro (double): uncertainty in the WISE W2 magnitude from the All-Sky Catalog.
+w3mpro (double): WISE W3 band magnitude taken from the WISE All-Sky Source Catalog.
+w3sigmpro (double): uncertainty in the WISE W3 magnitude from the All-Sky Catalog.
+w4mpro (double): WISE W4 band magnitude taken from the WISE All-Sky Source Catalog.
+w4sigmpro (double): uncertainty in the WISE W4 magnitude from the All-Sky Catalog.
+L_WISE1 (double): Luminosity of object in W1 band, calculated from w1mpro and redshift.
+L_lowerr_WISE1 (double): Lower bound uncertainty of W1 band luminosity.
+L_uperr_WISE1 (double): Upper bound uncertainty of W1 band luminosity.
+L_WISE2 (double): Luminosity of object in W2 band, calculated from w1mpro and redshift.
+L_lowerr_WISE2 (double): Lower bound uncertainty of W2 band luminosity.
+L_uperr_WISE2 (double): Upper bound uncertainty of W2 band luminosity.
+L_WISE3 (double): Luminosity of object in W3 band, calculated from w1mpro and redshift.
+L_lowerr_WISE3 (double): Lower bound uncertainty of W3 band luminosity.
+L_uperr_WISE3 (double): Upper bound uncertainty of W3 band luminosity.
+L_WISE4 (double): Luminosity of object in W4 band, calculated from w1mpro and redshift.
+L_lowerr_WISE4 (double): Lower bound uncertainty of W4 band luminosity.
+L_uperr_WISE4 (double): Upper bound uncertainty of W4 band luminosity.
+Jarrett_Classification (str): Classification of object on the WISE color diagram using the Jarret+2011 cut.
+Stern_Classification (str): Classification of object on the WISE color diagram using the Stern+2012 cut.
+Hviding_Classification (str): Classification of object on the WISE color diagram using the Hviding+2022 cut.
+WISE_Class (str): Classification of object on the WISE color diagram.
+upper_limit_flag_cxo (bool): True if object is upper limit in Chandra X-ray database reduction.
+upper_limit_flag_xmm (bool): True if object is upper limit in XMM Serendipitous Source Catalog (Webb+2020).
+L_0.2-12_FLIX (double): X-ray 0.2 - 12keV luminosity adjusted calculated by FLIX server
+L_0.5-8 (double): X-ray 0.5 - 8keV luminosity
+L_0.5-8_lo_limit (double): X-ray 0.5 - 8keV luminosity lower limit
+L_0.5-8_hi_limit (double): X-ray 0.5 - 8keV luminosity upper limit
+upper_limit_flag (bool): True if X-ray measurements was an upper limit
+L_NUV (double): GALEX near-UV luminosity
+L_NUV_uperr (double): GALEX near-UV luminosity upper limit
+L_NUV_lowerr (double): GALEX near-UV luminosity lower limit
+L_FUV (double): GALEX far-UV luminosity
+L_FUV_uperr (double): GALEX far-UV luminosity upper limit
+L_FUV_lowerr (double): GALEX far-UV luminosity lower limit
+log(SFR)_KE_12_opt (double): logarithmic Star Formation rate from Kennicutt and Evans 2012 using optical emission
+log(SFR)_KE_12_nuv (double): logarithmic Star Formation rate from Kennicutt and Evans 2012 using corrected near-UV
+log(SFR)_KE_12_fuv (double): logarithmic Star Formation rate from Kennicutt and Evans 2012 using corrected far-UV
+L_0.5-8_expect_XRB (double): Expected X-ray luminosity from X-ray binaries (Lehemer et al. 2019)
+L_0.5-8_expect_XRB_lo_limit (double): lower limit of expected X-ray luminosity from X-ray binaries (Lehemer et al. 2019)
+L_0.5-8_expect_XRB_hi_limit (double): upper limit of expected X-ray luminosity from X-ray binaries (Lehemer et al. 2019)
+L_expected_Gas (double): Expected X-ray luminosity from hot interstellar gas (Birchall et al. 2020)
+L_expected_Gas_lo_limit (double):lower limit of expected X-ray luminosity from hot interstellar gas (Birchall et al. 2020)
+L_expected_Gas__hi_limit (double): upper limit of expected X-ray luminosity from hot interstellar gas (Birchall et al. 2020)
+Npoints (long): number of datapoints in Palomar Transient Factory (PTF) lightcurve
+Baseline (double): baseline of PTF observations
+MedMag_r (double): median r band magnitude in PTF
+Std_r (double): standard deviation of r band light curve
+SigVar_r (double): significance of variability (from QSOFit - Bulter and Bloom 2011)
+SigQSO_r (double): measure of QSO variability (from QSOFit - Bulter and Bloom 2011)
+SigNotQSO_r (double): measure of non-QSO variability (from QSOFit - Bulter and Bloom 2011)
+cModelMag_u (double): SDSS cModel u Magnitudes from DR17 (Abdurro'uf et al 2022)
+cModelMagErr_u (double): SDSS cModel u Magnitude Errors from DR17 (Abdurro'uf et al 2022)
+cModelMag_g (double):SDSS cModel g Magnitudes from DR17 (Abdurro'uf et al 2022)
+cModelMagErr_g (double): SDSS cModel g Magnitude Errors from DR17 (Abdurro'uf et al 2022)
+cModelMag_r (double): SDSS cModel r Magnitudes from DR17 (Abdurro'uf et al 2022)
+cModelMagErr_r (double): SDSS cModel r Magnitude Errors from DR17 (Abdurro'uf et al 2022)
+cModelMag_i (double): SDSS cModel i Magnitudes from DR17 (Abdurro'uf et al 2022)
+cModelMagErr_i (double): SDSS cModel i Magnitude Errors from DR17 (Abdurro'uf et al 2022)
+cModelMag_z (double): SDSS cModel z Magnitudes from DR17 (Abdurro'uf et al 2022)
+cModelMagErr_z (double): SDSS cModel z Magnitude Errors from DR17 (Abdurro'uf et al 2022)
+extinction_u (double): SDSS u Magnitude Extinction from DR17 (Abdurro'uf et al 2022)
+extinction_g (double): SDSS g Magnitude Extinction from DR17 (Abdurro'uf et al 2022)
+extinction_r (double): SDSS r Magnitude Extinction from DR17 (Abdurro'uf et al 2022)
+extinction_i (double): SDSS i Magnitude Extinction from DR17 (Abdurro'uf et al 2022)
+extinction_z (double): SDSS z Magnitude Extinction from DR17 (Abdurro'uf et al 2022)
+RA_sdss (double): Right Ascension from SDSS
+DEC_sdss (double): Declination from SDSS
+RAerr_sdss (double): Right Ascension Error from SDSS
+DECerr_sdss (double): Declination Error form SDSS 
+clean_sdss (double): 'CLEAN' flag for SDSS photometry
+type_sdss (6A): SDSS photometry class
+RA_wise (double): Right Ascension from WISE
+DEC_wise (double): Declination from WISE
+RAunc_wise (double): Right Ascension Error from WISE
+DECunc_wise (double): Declination Error from WISE
+w1mpro_new (double): WISE W1 band magnitude taken from the WISE AllWISE Source Catalog (Wright+2019) (used for SED modeling in Wasleske+2025).
+w1sigmpro_new (double): uncertainty in WISE W1 band magnitude taken from the WISE AllWISE Source Catalog.
+w2mpro_new (double): WISE W2 band magnitude taken from the WISE AllWISE Source Catalog.
+w2sigmpro_new (double): uncertainty in WISE W2 band magnitude taken from the WISE AllWISE Source Catalog.
+w3mpro_new (double): WISE W3 band magnitude taken from the WISE AllWISE Source Catalog.
+w3sigmpro_new (double): uncertainty in WISE W3 band magnitude taken from the WISE AllWISE Source Catalog.
+w4mpro_new (double): WISE W4 band magnitude taken from the WISE AllWISE Source Catalog.
+w4sigmpro_new (double): uncertainty in WISE W4 band magnitude taken from the WISE AllWISE Source Catalog.
+dist_wise (double): separation from position to WISE source [degree]
+RA_galex (double): Right Ascension from GALEX GUVcatAIS GR 6+7 catalog
+DEC_galex (double): Declination from GALEX GUVcatAIS GR 6+7 catalog
+NUVmag (double): near-Ultraviolet magnitude from GALEX GUVcatAIS GR 6+7 catalog
+e_NUVmag (double): near-Ultraviolet magnitude error from GALEX GUVcatAIS GR 6+7 catalog
+FUVmag (double): far-Ultraviolet magnitude from GALEX GUVcatAIS GR 6+7 catalog
+e_FUVmag (double): far-Ultraviolet magnitude error from GALEX GUVcatAIS GR 6+7 catalog
+eBV_galex (double): excess color from GALEX GUVcatAIS GR 6+7 catalog
+raMean (double): Right Ascension from Pan_STARRS DR2 (Chambers et al. 2016; Flewelling et al. 2020)
+decMean (double): Declination from Pan_STARRS DR2 
+raMeanErr (double): Error Right Ascension from Pan_STARRS DR2
+decMeanErr (double): Error Declination from Pan_STARRS DR2 
+gMeanPSFMag (double): g band Mean PSF magnitude from Pan_STARRS DR2 
+gMeanPSFMagErr (double): Error g band Mean PSF magnitude from Pan_STARRS DR2 
+gMeanApMag (double): g band Aperture magnitude from Pan_STARRS DR2 
+gMeanApMagErr (double): Error band Aperture magnitude from Pan_STARRS DR2
+gFlags (double): g band flags from Pan_STARRS DR2
+rMeanPSFMag (double): r band Mean PSF magnitude from Pan_STARRS DR2 
+rMeanPSFMagErr (double): Error r band Mean PSF magnitude from Pan_STARRS DR2 
+rMeanApMag (double): r band Aperture magnitude from Pan_STARRS DR2
+rMeanApMagErr (double): Error r band Aperture magnitude from Pan_STARRS DR2
+rFlags (double): r band flags from Pan_STARRS DR2
+iMeanPSFMag (double): i band Mean PSF magnitude from Pan_STARRS DR2 
+iMeanPSFMagErr (double): Error i band Mean PSF magnitude from Pan_STARRS DR2 
+iMeanApMag (double): i band Aperture magnitude from Pan_STARRS DR2
+iMeanApMagErr (double): Error i band Aperture magnitude from Pan_STARRS DR2
+iFlags (double): i band flags from Pan_STARRS DR2
+zMeanPSFMag (double): z band Mean PSF magnitude from Pan_STARRS DR2 
+zMeanPSFMagErr (double): Error z band Mean PSF magnitude from Pan_STARRS DR2 
+zMeanApMag (double): z band Aperture magnitude from Pan_STARRS DR2
+zMeanApMagErr (double): Error z band Aperture magnitude from Pan_STARRS DR2
+zFlags (double): z band flags from Pan_STARRS DR2
+yMeanPSFMag (double): y band Mean PSF magnitude from Pan_STARRS DR2 
+yMeanPSFMagErr (double): Error y band Mean PSF magnitude from Pan_STARRS DR2 
+yMeanApMag (double): y band Aperture magnitude from Pan_STARRS DR2
+yMeanApMagErr (double): Error y band Aperture magnitude from Pan_STARRS DR2
+yFlags (double): y band flags from Pan_STARRS DR2
+RA_ukidss (double): Right Ascension from UKIDSSDR11PLUS (Lawerence et al. 2007)
+DEC_ukidss (double): Declination from UKIDSSDR11PLUS
+RAunc_ukidss (double): Right Ascension Error from UKIDSSDR11PLUS
+DECunc_ukidss (double): Declination Error from UKIDSSDR11PLUS
+yAperMag3 (double): Y band Aperture magnitude from Large Area Survey of UKIDSSDR11PLUS
+yAperMag3Err (double): Error Y band Aperture magnitude from Large Area Survey of UKIDSSDR11PLUS
+j_1AperMag3 (double): J band Aperture magnitude from Large Area Survey of UKIDSSDR11PLUS
+j_1AperMag3Err (double): Error J band Aperture magnitude from Large Area Survey of UKIDSSDR11PLUS
+hAperMag3 (double): H band Aperture magnitude from Large Area Survey of UKIDSSDR11PLUS
+hAperMag3Err (double): Error H band Aperture magnitude from Large Area Survey of UKIDSSDR11PLUS
+kAperMag3 (double): K band Aperture magnitude from Large Area Survey of UKIDSSDR11PLUS
+kAperMag3Err (double): Error K band Aperture magnitude from Large Area Survey of UKIDSSDR11PLUS
+yPetroMag (double): Y band Petrosian magnitude from Large Area Survey of UKIDSSDR11PLUS
+yPetroMagErr (double): Error Y band Petrosian magnitude from Large Area Survey of UKIDSSDR11PLUS
+j_1PetroMag (double): J band Petrosian magnitude from Large Area Survey of UKIDSSDR11PLUS
+j_1PetroMagErr (double): Error J band Petrosian magnitude from Large Area Survey of UKIDSSDR11PLUS
+hPetroMag (double): H band Petrosian magnitude from Large Area Survey of UKIDSSDR11PLUS
+hPetroMagErr (double): Error H band Petrosian magnitude from Large Area Survey of UKIDSSDR11PLUS
+kPetroMag (double): K band Petrosian magnitude from Large Area Survey of UKIDSSDR11PLUS
+kPetroMagErr (double): Error K band Petrosian magnitude from Large Area Survey of UKIDSSDR11PLUS
+yPsfMag (double): Y band PSF magnitude from Large Area Survey of UKIDSSDR11PLUS
+yPsfMagErr (double): Error Y band PSF magnitude from Large Area Survey of UKIDSSDR11PLUS
+j_1PsfMag (double): J band PSF magnitude from Large Area Survey of UKIDSSDR11PLUS
+j_1PsfMagErr (double): Error J band PSF magnitude from Large Area Survey of UKIDSSDR11PLUS
+hPsfMag (double):H band PSF magnitude from Large Area Survey of UKIDSSDR11PLUS
+hPsfMagErr (double): Error H band PSF magnitude from Large Area Survey of UKIDSSDR11PLUS
+kPsfMag (double): K band PSF magnitude from Large Area Survey of UKIDSSDR11PLUS
+kPsfMagErr (double): Error K band PSF magnitude from Large Area Survey of UKIDSSDR11PLUS
+eBV_ukidss (double): excess color from UKIDSSDR11PLUS
+dist_ukidss (double): separation of position to position from UKIDSSDR11PLUS [degree]
+bayes.agn.EBV (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.agn.EBV_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.agn.fracAGN (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.agn.fracAGN_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.stellar.metallicity (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.stellar.metallicity_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.agn.L_6um (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.agn.L_6um_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.agn.accretion_power (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.agn.accretion_power_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.agn.intrin_Lnu_2500A_30deg (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.agn.intrin_Lnu_2500A_30deg_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.agn.luminosity (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.agn.luminosity_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.dust.luminosity (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.dust.luminosity_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sfh.sfr (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sfh.sfr_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sfh.sfr100Myrs (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sfh.sfr100Myrs_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sfh.sfr10Myrs (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sfh.sfr10Myrs_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.stellar.lum (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.stellar.lum_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.H_2mass (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.H_2mass_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.J_2mass (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.J_2mass_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.Ks_2mass (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.Ks_2mass_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.WISE1 (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.WISE1_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.WISE2 (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.WISE2_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.WISE3 (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.WISE3_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.WISE4 (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.WISE4_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.galex.FUV (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.galex.FUV_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.galex.NUV (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.galex.NUV_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sdss.gp (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sdss.gp_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sdss.ip (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sdss.ip_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sdss.rp (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sdss.rp_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sdss.up (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sdss.up_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sdss.zp (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sdss.zp_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.ukirt.H (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.ukirt.H_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.ukirt.J (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.ukirt.J_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.ukirt.Ks (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.ukirt.Ks_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.ukirt.Y (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.ukirt.Y_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.xray_boxcar_0p5to8keV (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.xray_boxcar_0p5to8keV_err (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+Selection_Results (63A): String list of the methods that selected object as AGN (see last 10 columns for a break down)
+bayes.H_2mass_L (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.ukirt.J_L (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.ukirt.H_L (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sdss.zp_L (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sdss.ip_L (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sdss.rp_L (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sdss.gp_L (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.sdss.up_L (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.galex.NUV_L (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.galex.FUV_L (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.WISE4_L (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.WISE3_L (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.WISE2_L (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.WISE1_L (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.Ks_2mass_L (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.J_2mass_L (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.ukirt.Ks_L (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+bayes.ukirt.Y_L (double): Bayesian estimate from CIGALE (Yang et al. 2022) for this parameter
+BPT (double): =1 off selected as AGN or Composite, =0 if not
+[OI]-Seyfert (double): =1 off selected as AGN or Composite, =0 if not
+[OI]-LINER (double): =1 off selected as AGN or Composite, =0 if not
+[SII]-Seyfert (double):=1 off selected as AGN or Composite, =0 if not
+[SII]-LINER (double): =1 off selected as AGN or Composite, =0 if not
+[HeII] (double): =1 off selected as AGN or Composite, =0 if not
+broad-line (double): =1 if it had broad Balmer emission in SDSS or GAMA spectrum, =0 if not
+IR (double): =1 if selected as AGN via Jarrett+2011, Stern+2012, or Hviding+2022 WISE color criteria, =0 if not
+X-ray (double): =1 if selected as X-ray AGN in Wasleske+2024 (comparing to expected X-rays from star formation), =0 if not
+Var. (double): =1 if variability selected AGN (see Wasleske+2024)
+
+
+
+
+
+
